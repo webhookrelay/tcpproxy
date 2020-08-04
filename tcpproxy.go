@@ -241,7 +241,7 @@ func (p *Proxy) serveConn(c net.Conn, routes []route) bool {
 		}
 	}
 	// TODO: hook for this?
-	log.Printf("tcpproxy: no routes matched conn %v/%v; closing", c.RemoteAddr().String(), c.LocalAddr().String())
+	// log.Printf("tcpproxy: no routes matched conn %v/%v; closing", c.RemoteAddr().String(), c.LocalAddr().String())
 	c.Close()
 	return false
 }
